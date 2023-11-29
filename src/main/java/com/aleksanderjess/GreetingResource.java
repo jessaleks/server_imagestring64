@@ -2,6 +2,7 @@ package com.aleksanderjess;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.net.URI;
 import java.net.URL;
 import java.util.Base64;
 import java.util.Optional;
@@ -26,7 +27,7 @@ public class GreetingResource {
         // gets the image from the URL
         // encodes it into a base64 string and returns it
         if (!imageUrl.isEmpty()) {
-            try (var inputStream = new URL(imageUrl).openStream()) {
+            try (var inputStream = new URI(imageUrl).toURL().openStream()) {
                 BufferedImage image = ImageIO.read(inputStream);
                 var type = image.getType();
                 BufferedImage outputImage = new BufferedImage(19,

@@ -10,7 +10,7 @@
 #
 # Then, build the image with:
 #
-# docker build -f src/main/docker/Dockerfile.native-micro -t quarkus/imagestring64 .
+# docker build -f src/main/docker/Dockerfile-micro -t quarkus/imagestring64 .
 #
 # Then run the container using:
 #
